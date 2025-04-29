@@ -32,3 +32,7 @@ This React-based web app is designed for monitoring patients in the healthcare s
 - MUI
 - Rechart
 - GitHub Actions + Azure Static Web Apps
+
+
+Live Demo Link (Azure): https://white-beach-02836bb03.6.azurestaticapps.net/
+Github : 
