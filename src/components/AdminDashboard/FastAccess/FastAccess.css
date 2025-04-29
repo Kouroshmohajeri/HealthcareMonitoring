@@ -1,0 +1,25 @@
+.fast-access-section {
+    margin-bottom: 2rem;
+  }
+  
+  .fast-access-title {
+    margin-bottom: 1rem;
+  }
+  
+  .fast-access-box {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .fast-access-box:hover {
+    border-color: #2A4B9A;
+    background-color: #f5f5f5;
+  }
+  

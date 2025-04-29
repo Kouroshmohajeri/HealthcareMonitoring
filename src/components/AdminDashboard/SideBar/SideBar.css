@@ -1,0 +1,160 @@
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.username {
+  color: #343a40;
+  margin-top: 0.5rem;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.nav-button {
+  color: #343a40;
+  justify-content: flex-start;
+  padding-left: 0;
+  text-transform: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-button:hover .button-content {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button:hover .button-content::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid #2A4B9A;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.icon-container {
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #343a40;
+}
+
+.text {
+  color: #343a40;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.logout-section {
+  width: 100%;
+  color: red !important;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  color: red !important;
+  justify-content: flex-start;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.desktop-sidebar {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+  width: 14%;
+  height: 100vh;
+  background-color: #caf0f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #2A4B9A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  height: 30px;
+}
+
+
+.mobile-menu-button {
+  background-color: transparent !important;
+}
+
+
+@media (max-width: 900px) {
+  .desktop-sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) {
+  .mobile-header {
+    display: none !important;
+  }
+  
+  .mobile-menu-button {
+    display: none !important;
+  }
+}

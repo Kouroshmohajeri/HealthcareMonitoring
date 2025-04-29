@@ -1,0 +1,48 @@
+.admin-dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-content, .header {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.desktop-header {
+    width: 100%;
+    background-color: #2A4B9A;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.user-display-container{
+  margin-bottom: 10%;
+}
+.dashboard-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-header .logo {
+    height: 40px;
+}
+.context{
+    padding: 1em;
+    flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .main-content {
+    width: 100%;
+    padding-top: 80px; 
+  }
+  
+  .desktop-header {
+    display: none;
+  }
+}
