@@ -1,9 +1,9 @@
 import API from "../server";
-
+const sensorUrl = "c/2806-7b54-4b19-911d";
 // Get all sensor data
 export const getAllSensors = async () => {
   try {
-    const response = await API.get(process.env.REACT_APP_SENSOR_URL);
+    const response = await API.get(sensorUrl);
     return response.data.sensors; // Assuming the response has a "sensors" array
   } catch (error) {
     console.error("Error fetching all sensors:", error);
@@ -14,8 +14,8 @@ export const getAllSensors = async () => {
 // Get sensor data by userId
 export const getSensorByUserId = async (userId) => {
   try {
-    const response = await API.get(process.env.REACT_APP_SENSOR_URL);
-    console.log(process.env.REACT_APP_SENSOR_URL);
+    const response = await API.get(sensorUrl);
+    console.log(sensorUrl);
     const sensor = response.data.sensors.find((s) => s.userId === userId);
     console.log(sensor);
     if (!sensor) {
@@ -31,7 +31,7 @@ export const getSensorByUserId = async (userId) => {
 // Get sensor data by sensorId
 export const getSensorBySensorId = async (sensorId) => {
   try {
-    const response = await API.get(process.env.REACT_APP_SENSOR_URL);
+    const response = await API.get(sensorUrl);
     const sensor = response.data.sensors.find((s) => s.sensorId === sensorId);
     if (!sensor) {
       throw new Error(`No sensor found with ID ${sensorId}`);
@@ -46,7 +46,7 @@ export const getSensorBySensorId = async (sensorId) => {
 // Get total amount of sensors
 export const getTotalSensors = async () => {
   try {
-    const response = await API.get(process.env.REACT_APP_SENSOR_URL);
+    const response = await API.get(sensorUrl);
     return response.data.sensors.length;
   } catch (error) {
     console.error("Error fetching total sensors:", error);
