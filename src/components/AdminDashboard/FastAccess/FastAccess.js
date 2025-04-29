@@ -54,7 +54,7 @@ const FastAccess = () => {
       setLoading(true);
       try {
         const data = await getAllUsers();
-        setUsers(data);
+        setUsers(data.users);
       } catch (error) {
         console.error("Error fetching users:", error);
       } finally {
